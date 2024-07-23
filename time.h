@@ -1,5 +1,4 @@
 #pragma once
-#include <cstdlib>
 
 class Time
 {
@@ -11,7 +10,7 @@ public:
     Time(int d, int h, int m, int s);
     Time(int h, int m, int s);
     Time(int h, int m);
-    void simplify();
+    // void simplify();
     int getDays() const;
     int getHours() const;
     int getMinutes() const;

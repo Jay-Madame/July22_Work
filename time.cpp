@@ -1,6 +1,6 @@
 #include "time.h"
 
-Time::Time() : Time(0, 0, 0, 0) {}
+Time::Time() : Time::Time(0, 0, 0, 0) {}
 
 Time::Time(int d, int h, int m, int s) : days(d), hours(h), minutes(m), seconds(s) {}
 
@@ -8,7 +8,7 @@ Time::Time(int h, int m, int s) : Time(0, h, m, s) {}
 
 Time::Time(int h, int m) : Time(0, h, m, 0) {}
 
-void Time::simplify()
+/*void Time::simplify()
 {
     if (seconds >= 60)
     {
@@ -25,15 +25,18 @@ void Time::simplify()
         hours -= ((abs(minutes) / 60) + 1);
         minutes = (abs(minutes) % 60);
     }
-    if (hours < 0) {
-        days += hours /24;
+    if (hours < 0)
+    {
+        days += hours / 24;
         hours = hours % 24;
     }
-    if (hours < 0) {
-        days -= ((abs(hours)/ 24) + 1);
+    if (hours < 0)
+    {
+        days -= ((abs(hours) / 24) + 1);
         hours = (abs(hours) % 24);
     }
 }
+*/
 int Time::getDays() const
 {
     return days;

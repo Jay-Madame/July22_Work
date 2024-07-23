@@ -4,16 +4,16 @@
  [ ] By the end of class, you should be able to define your own C++ operator overloads.
 
 ## During Class
-[ ] __Time Set Up__
-    [ ] Make a class called Time
-    [ ] Time should have integer values for days, hours, minutes, seconds.
-    [ ] Time should have a constructor, and getters for each of these instance variables
-    [ ] Default constructor would set all instance variables to 0;
-    [ ] Another constructor should take in days, hours, months, and seconds and a third to take in hours, minutes, seconds, and a final one to take in hours and minutes.
+[x] __Time Set Up__
+    [x] Make a class called Time
+    [x] Time should have integer values for days, hours, minutes, seconds.
+    [x] Time should have a constructor, and getters for each of these instance variables
+    [x] Default constructor would set all instance variables to 0;
+    [x] Another constructor should take in days, hours, months, and seconds and a third to take in hours, minutes, seconds, and a final one to take in hours and minutes.
 
-[ ] __Time = tester__
+[x] __Time = tester__
  - Time has no complex data types, so the Time class should use the default = operator, without a need to overload it
-    [ ] Test this out in the main class by _creating an assignmentTest() function_, that essentially creates two Time objects, assigns one to the other and tests whether the values were copied over.
+    [x] Test this out in the main class by _creating an assignmentTest() function_, that essentially creates two Time objects, assigns one to the other and tests whether the values were copied over.
 
 [ ] __Time +- operator overloading__
     [ ] We should be able to add one time to another.  This should calculate the seconds, minutes, hours, and days of the sum or difference of two different times.
