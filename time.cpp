@@ -96,7 +96,7 @@ Time Time::operator-(Time &right)
 Time Time::operator++()
 {
     seconds++;
-    this-> simplify();
+    this->simplify();
     return *this;
 }
 Time Time::operator++(int)
@@ -109,7 +109,7 @@ Time Time::operator++(int)
 Time Time::operator--()
 {
     seconds--;
-    this-> simplify();
+    this->simplify();
     return *this;
 }
 Time Time::operator--(int)
@@ -118,4 +118,44 @@ Time Time::operator--(int)
     seconds--;
     simplify();
     return oldTime;
+}
+
+bool Time::operator<(Time &right)
+{
+    if (this->days < right.days)
+        return true;
+    else if (this->days == right.days)
+        if (this->hours < right.hours)
+            return true;
+        else if (this->hours == right.hours)
+            if (this->minutes < right.minutes)
+                return true;
+            else if (this->minutes == right.minutes)
+                if (this->seconds < right.seconds)
+                    return true;
+    return false;
+}
+
+bool Time::operator>(Time &right)
+{
+    if (this->days > right.days)
+        return true;
+    else if (this->days == right.days)
+        if (this->hours > right.hours)
+            return true;
+        else if (this->hours == right.hours)
+            if (this->minutes > right.minutes)
+                return true;
+            else if (this->minutes == right.minutes)
+                if (this->seconds > right.seconds)
+                    return true;
+    return false;
+}
+std::ostream &operator<<(std::ostream &strm, const Time &obj)
+{
+    strm << obj.getDays() << " "
+         << obj.getHours() << ":"
+         << obj.getMinutes() << ":"
+         << obj.getSeconds() << "\n";
+    return strm;
 }

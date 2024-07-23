@@ -24,13 +24,13 @@
     [x] Implement the ++ and -- pre and postfix operators for time.  Each time, increase or decrease the time by 1 second and simplify it.
     [x] Test these functions out with _testPrePlus() testPreMinus_, _testPostMinus_, and _testPostPlus()_ functions,
 
-[ ] __Time relational operator__
-    [ ] Create relational operator functions for the Time class.
-    [ ] Test them with a _testTimeRelationalOperators()_ function.
+[x] __Time relational operator__
+    [x] Create relational operator functions for the Time class.
+    [x] Test them with a _testTimeRelationalOperators()_ function.
 
-[ ] __Time << function__
-    [ ] Create an ostream << operator overload that takes a Time object.
-    [ ] Test it out in a _testTimeOutStreamOperator()_ function.
+[x] __Time << function__
+    [x] Create an ostream << operator overload that takes a Time object.
+    [x] Test it out in a _testTimeOutStreamOperator()_ function.
 
 [ ] __Deck[] overload__
     [ ] Go to the Deck example.

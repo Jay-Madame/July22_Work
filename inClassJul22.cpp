@@ -9,6 +9,8 @@ void testTimeAddition();
 void testTimeSubtraction();
 void testTimePlusPlus();
 void testTimeMinusMinus();
+void testTimeRelationalOperators();
+void testTimeExtractionOperator();
 
 // main
 int main()
@@ -17,8 +19,10 @@ int main()
     // testTimeSimplify();
     // testTimeAddition();
     // testTimeSubtraction();
-    testTimePlusPlus();
-    testTimeMinusMinus();
+    // testTimePlusPlus();
+    // testTimeMinusMinus();
+    // testTimeRelationalOperators();
+    testTimeExtractionOperator();
     return 0;
 }
 
@@ -91,4 +95,17 @@ void testTimeMinusMinus()
     std::cout << now.getDays() << " " << now.getHours()
               << ":" << now.getMinutes()
               << ":" << now.getSeconds() << std::endl;
+}
+
+void testTimeRelationalOperators()
+{
+    Time now(11, 59);
+    Time later(1, 1, 1, 1);
+    std::cout << (now > later) << std::endl;
+    std::cout << (now < later) << std::endl;
+}
+void testTimeExtractionOperator()
+{
+    Time now(0, 12, 17, 32);
+    std::cout << now;
 }
