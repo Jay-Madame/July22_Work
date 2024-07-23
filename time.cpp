@@ -8,7 +8,7 @@ Time::Time(int h, int m, int s) : Time(0, h, m, s) {}
 
 Time::Time(int h, int m) : Time(0, h, m, 0) {}
 
-/*void Time::simplify()
+void Time::simplify()
 {
     if (seconds >= 60)
     {
@@ -18,14 +18,19 @@ Time::Time(int h, int m) : Time(0, h, m, 0) {}
     if (seconds < 0)
     {
         minutes -= ((abs(seconds) / 60) + 1);
-        seconds = (abs(seconds) % 60);
+        seconds = 60 - (abs(seconds) % 60);
+    }
+    if (minutes >= 60)
+    {
+        hours += minutes / 60;
+        minutes = minutes % 60;
     }
     if (minutes < 0)
     {
         hours -= ((abs(minutes) / 60) + 1);
-        minutes = (abs(minutes) % 60);
+        minutes = 60 - (abs(minutes) % 60);
     }
-    if (hours < 0)
+    if (hours >= 24)
     {
         days += hours / 24;
         hours = hours % 24;
@@ -33,10 +38,10 @@ Time::Time(int h, int m) : Time(0, h, m, 0) {}
     if (hours < 0)
     {
         days -= ((abs(hours) / 24) + 1);
-        hours = (abs(hours) % 24);
+        hours = 24 - (abs(hours) % 24);
     }
 }
-*/
+
 int Time::getDays() const
 {
     return days;
