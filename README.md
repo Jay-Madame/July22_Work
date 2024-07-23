@@ -15,10 +15,10 @@
  - Time has no complex data types, so the Time class should use the default = operator, without a need to overload it
     [x] Test this out in the main class by _creating an assignmentTest() function_, that essentially creates two Time objects, assigns one to the other and tests whether the values were copied over.
 
-[ ] __Time +- operator overloading__
-    [ ] We should be able to add one time to another.  This should calculate the seconds, minutes, hours, and days of the sum or difference of two different times.
-    [ ] Make sure that seconds and minutes do not exceed 59 or go below 0, and that hours does not exceed 23 or go below 0.  Days can be arbitrarily high or negative.
-    [ ] Test these functions out with _testTimeAddition()_ and _testTimeSubtraction()_ functions.
+[x] __Time +- operator overloading__
+    [x] We should be able to add one time to another.  This should calculate the seconds, minutes, hours, and days of the sum or difference of two different times.
+    [x] Make sure that seconds and minutes do not exceed 59 or go below 0, and that hours does not exceed 23 or go below 0.  Days can be arbitrarily high or negative.
+    [x] Test these functions out with _testTimeAddition()_ and _testTimeSubtraction()_ functions.
 
 [ ] __Time ++ pre and postfix__
     [ ] Implement the ++ and -- pre and postfix operators for time.  Each time, increase or decrease the time by 1 second and simplify it.

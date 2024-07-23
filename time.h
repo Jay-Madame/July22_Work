@@ -16,4 +16,6 @@ public:
     int getHours() const;
     int getMinutes() const;
     int getSeconds() const;
+    Time operator+(Time &right);
+    Time operator-(Time &right);
 };

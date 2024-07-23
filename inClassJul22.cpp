@@ -2,15 +2,24 @@
 #include "time.cpp"
 #include <iostream>
 
+// functioning :3
 void testTimeAssignment();
 void testTimeSimplify();
+void testTimeAddition();
+void testTimeSubtraction();
+
+// main
 int main()
 {
-    testTimeAssignment();
-    testTimeSimplify();
+    // testTimeAssignment();
+    // testTimeSimplify();
+    testTimeAddition();
+    testTimeSubtraction();
+
     return 0;
 }
 
+// overloading a constructor
 void testTimeAssignment()
 {
     Time now = Time(10, 20);
@@ -21,6 +30,7 @@ void testTimeAssignment()
     std::cout << now.getHours() << ": " << now.getMinutes() << std::endl;
 }
 
+// the beginning of addition and subtraction overload
 void testTimeSimplify()
 {
     Time myTime(36, 61, 61);
@@ -37,4 +47,26 @@ void testTimeSimplify()
     std::cout << myOtherTime.getDays() << " " << myOtherTime.getHours()
               << ":" << myOtherTime.getMinutes() << " " << myOtherTime.getSeconds()
               << std::endl;
+}
+
+void testTimeAddition()
+{
+    Time now(11, 05);
+    Time dinner(18, 30);
+    Time later = now + dinner;
+
+    std::cout << later.getDays() << " " << later.getHours()
+              << ":" << later.getMinutes()
+              << " " << later.getSeconds() << std::endl;
+}
+
+void testTimeSubtraction()
+{
+    Time now(11, 05);
+    Time dinner(18, 30);
+    Time later = dinner - now;
+
+    std::cout << later.getDays() << " " << later.getHours()
+              << ":" << later.getMinutes()
+              << " " << later.getSeconds() << std::endl;
 }

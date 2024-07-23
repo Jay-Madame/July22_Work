@@ -61,3 +61,32 @@ int Time::getSeconds() const
 {
     return seconds;
 }
+
+Time Time::operator+(Time &right)
+{
+    Time tempTime;
+
+    // [note]
+    //  alternatively, you could use (*this).hours over this-> hours
+    tempTime.hours = this->hours + right.hours;
+    tempTime.days = this->days + right.days;
+    tempTime.minutes = this->minutes + right.minutes;
+    tempTime.seconds = this->seconds + right.seconds;
+
+    tempTime.simplify();
+    
+    return tempTime;
+}
+Time Time::operator-(Time &right)
+{
+    Time tempTime;
+
+    tempTime.hours = (*this).hours - right.hours;
+    tempTime.days = (*this).days - right.days;
+    tempTime.minutes = (*this).minutes - right.minutes;
+    tempTime.seconds = (*this).seconds - right.seconds;
+
+    tempTime.simplify();
+
+    return tempTime;
+}
