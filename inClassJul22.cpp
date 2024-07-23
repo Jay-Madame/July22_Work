@@ -7,15 +7,18 @@ void testTimeAssignment();
 void testTimeSimplify();
 void testTimeAddition();
 void testTimeSubtraction();
+void testTimePlusPlus();
+void testTimeMinusMinus();
 
 // main
 int main()
 {
     // testTimeAssignment();
     // testTimeSimplify();
-    testTimeAddition();
-    testTimeSubtraction();
-
+    // testTimeAddition();
+    // testTimeSubtraction();
+    testTimePlusPlus();
+    testTimeMinusMinus();
     return 0;
 }
 
@@ -69,4 +72,23 @@ void testTimeSubtraction()
     std::cout << later.getDays() << " " << later.getHours()
               << ":" << later.getMinutes()
               << " " << later.getSeconds() << std::endl;
+}
+
+void testTimePlusPlus()
+{
+    Time now(11, 24, 59);
+    now++;
+
+    std::cout << now.getDays() << " " << now.getHours()
+              << ":" << now.getMinutes()
+              << " " << now.getSeconds() << std::endl;
+}
+void testTimeMinusMinus()
+{
+    Time now(11, 25, 0);
+    now--;
+
+    std::cout << now.getDays() << " " << now.getHours()
+              << ":" << now.getMinutes()
+              << ":" << now.getSeconds() << std::endl;
 }

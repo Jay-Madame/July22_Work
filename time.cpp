@@ -62,6 +62,7 @@ int Time::getSeconds() const
     return seconds;
 }
 
+// operator overloading
 Time Time::operator+(Time &right)
 {
     Time tempTime;
@@ -74,9 +75,10 @@ Time Time::operator+(Time &right)
     tempTime.seconds = this->seconds + right.seconds;
 
     tempTime.simplify();
-    
+
     return tempTime;
 }
+
 Time Time::operator-(Time &right)
 {
     Time tempTime;
@@ -89,4 +91,31 @@ Time Time::operator-(Time &right)
     tempTime.simplify();
 
     return tempTime;
+}
+
+Time Time::operator++()
+{
+    seconds++;
+    this-> simplify();
+    return *this;
+}
+Time Time::operator++(int)
+{
+    Time oldTime = *this;
+    seconds++;
+    simplify();
+    return oldTime;
+}
+Time Time::operator--()
+{
+    seconds--;
+    this-> simplify();
+    return *this;
+}
+Time Time::operator--(int)
+{
+    Time oldTime = *this;
+    seconds--;
+    simplify();
+    return oldTime;
 }

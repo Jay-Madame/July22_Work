@@ -20,9 +20,9 @@
     [x] Make sure that seconds and minutes do not exceed 59 or go below 0, and that hours does not exceed 23 or go below 0.  Days can be arbitrarily high or negative.
     [x] Test these functions out with _testTimeAddition()_ and _testTimeSubtraction()_ functions.
 
-[ ] __Time ++ pre and postfix__
-    [ ] Implement the ++ and -- pre and postfix operators for time.  Each time, increase or decrease the time by 1 second and simplify it.
-    [ ] Test these functions out with _testPrePlus() testPreMinus_, _testPostMinus_, and _testPostPlus()_ functions,
+[x] __Time ++ pre and postfix__
+    [x] Implement the ++ and -- pre and postfix operators for time.  Each time, increase or decrease the time by 1 second and simplify it.
+    [x] Test these functions out with _testPrePlus() testPreMinus_, _testPostMinus_, and _testPostPlus()_ functions,
 
 [ ] __Time relational operator__
     [ ] Create relational operator functions for the Time class.
