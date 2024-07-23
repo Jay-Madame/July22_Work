@@ -26,7 +26,14 @@ public:
     Time operator++(int);
     Time operator--();
     Time operator--(int);
+
+    //relational operator
     bool operator<(Time &right);
     bool operator>(Time &right);
+    
+    //<< function
     friend std::ostream &operator<<(std::ostream &strm, const Time &obj);
+
+    //int conversion
+    operator int();
 };

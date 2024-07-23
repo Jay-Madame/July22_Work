@@ -32,15 +32,15 @@
     [x] Create an ostream << operator overload that takes a Time object.
     [x] Test it out in a _testTimeOutStreamOperator()_ function.
 
-[ ] __Deck[] overload__
-    [ ] Go to the Deck example.
-    [ ] Create an overload of the _[]_ function that will refer to the card at the appropriate location.
+[IP] __Deck[] overload__
+    [IP] Go to the Deck example.
+    [IP] Create an overload of the _[]_ function that will refer to the card at the appropriate location.
 
 
-[ ] __Time to int conversion__
-    [ ] Create a function that will convert a Time object into an int.  Make the integer equal to the number of seconds represented by the time.
-    [ ] Test this conversion out in a _testTimeIntegerConversion()_ function.
+[x] __Time to int conversion__
+    [x] Create a function that will convert a Time object into an int.  Make the integer equal to the number of seconds represented by the time.
+    [x] Test this conversion out in a _testTimeIntegerConversion()_ function.
 
 ## Exit Ticket
 
-[ ] Turn in your Time class and tester functions - Due on July 23 at 9:40 A.M
+[x] Turn in your Time class and tester functions - Due on July 23 at 9:40 A.M

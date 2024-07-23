@@ -136,6 +136,17 @@ bool Time::operator<(Time &right)
     return false;
 }
 
+Time::operator int()
+{
+    int totalSeconds = 0;
+    totalSeconds =
+        seconds +
+        60 * (minutes +
+              60 * (hours +
+                    24 * days));
+    return totalSeconds;
+}
+
 bool Time::operator>(Time &right)
 {
     if (this->days > right.days)

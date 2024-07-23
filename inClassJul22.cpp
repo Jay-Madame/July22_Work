@@ -11,6 +11,7 @@ void testTimePlusPlus();
 void testTimeMinusMinus();
 void testTimeRelationalOperators();
 void testTimeExtractionOperator();
+void testTimeIntegerConversion();
 
 // main
 int main()
@@ -22,7 +23,8 @@ int main()
     // testTimePlusPlus();
     // testTimeMinusMinus();
     // testTimeRelationalOperators();
-    testTimeExtractionOperator();
+    // testTimeExtractionOperator();
+    testTimeIntegerConversion();
     return 0;
 }
 
@@ -108,4 +110,11 @@ void testTimeExtractionOperator()
 {
     Time now(0, 12, 17, 32);
     std::cout << now;
+}
+
+void testTimeIntegerConversion()
+{
+    Time tomorrowsClass(1, 9, 40, 0);
+    std::cout << static_cast<int>(tomorrowsClass) << std::endl;
+    std::cout << 1 + tomorrowsClass;
 }
